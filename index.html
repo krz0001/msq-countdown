@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FFXIV MSQ Countdown</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+    <script type="module" src="/main.js"></script>
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <h1>MSQ Countdown</h1>
+        </header>
+
+        <form id="quest-name">
+            <!-- Dropdown for chapter -->
+
+            <label for="chapter">Nom de la quête de l'épopée en cours :</label>
+            <select id="chapter" required>
+                <option value="" selected disabled>Sélectionnez un chapitre</option>
+            </select>
+
+
+            <label for="quest">Nom de la quête de l'épopée en cours :</label>
+            <input type="text" id="quest" name="quest" placeholder="Le meilleur ami de l'homme" required>
+            <small>Quête trouvée : <span id="found-user-quest">Le meilleur ami de l'homme</span> </small>
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <article id="countdown">
+            <h2>
+                Il vous reste <span id="countdown-number" style="color: var(--primary)">--</span> quête(s) avant le prochain <span data-tooltip="Chapitre = Extension ou fin de série de patchs (X.1, X.2, jusqu'à X.5)">chapitre</span>.
+            </h2>
+
+            <div>
+                <p id="chapter-progression__text">Votre progression sur le chapitre en cours : <b>???</b></p>
+                <div id="chapter-progression__bar">
+                    <progress value="0" max="100"></progress>
+                </div>
+            </div>
+
+    </main>
+
+
+
+</body>
+
+</html>
